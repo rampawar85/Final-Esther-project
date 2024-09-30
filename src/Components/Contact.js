@@ -5,17 +5,21 @@ class Contact extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const name = this.props.data.name;
+    //const name = this.props.data.name;
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
     const state = this.props.data.address.state;
     const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
-    const message = this.props.data.contactmessage;
+   // const message = this.props.data.contactmessage;
+    const streetC = this.props.data.addresscanada.street;
+    const cityC = this.props.data.addresscanada.city;
+    const stateC = this.props.data.addresscanada.state;
+    const phoneC = this.props.data.addresscanada.phone;
 
     return (
       <section id="contact">
-        <Fade bottom duration={1000}>
+        {/* <Fade bottom duration={1000}>
           <div className="row section-head">
             <div className="two columns header-col">
               <h1>
@@ -27,12 +31,19 @@ class Contact extends Component {
               <p className="lead">{message}</p>
             </div>
           </div>
-        </Fade>
+        </Fade> */}
 
         <div className="row">
           <Slide left duration={1000}>
             <div className="eight columns">
-              <form action="" method="post" id="contactForm" name="contactForm">
+              <p>
+                <b>Our offices:</b>  Our culture of engineering excellence, technical
+                expertise, and care for our clients and talented workforce has
+                made us one of the fastest-growing companies over the globe. We
+                are headquartered in Pune, have training/learning centers in the
+                USA and Canada, and are rapidly expanding our global footprint.
+              </p>
+              {/* <form action="" method="post" id="contactForm" name="contactForm">
                 <fieldset>
                   <div>
                     <label htmlFor="contactName">
@@ -99,23 +110,32 @@ class Contact extends Component {
               <div id="message-success">
                 <i className="fa fa-check"></i>Your message was sent, thank you!
                 <br />
-              </div>
+              </div> */}
             </div>
           </Slide>
 
           <Slide right duration={1000}>
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
-                <h4>Address and Phone</h4>
-                <p className="address" style={{color: '#fff'}}>
-                  {name}
-                  <br />
+                <h4>India</h4>
+                <p className="address" style={{ color: "#fff" }}>
+                  {/* {name} */}
                   {street} <br />
                   {city}, {state} {zip}
                   <br />
                   <span>{phone}</span>
                 </p>
-              </div>              
+              </div>
+              <div className="widget widget_contact">
+                <h4>Canada</h4>
+                <p className="address" style={{ color: "#fff" }}>
+                  {/* {name} */}
+                  {streetC} <br />
+                  {cityC}, {stateC}
+                  <br />
+                  <span>{phoneC}</span>
+                </p>
+              </div>
             </aside>
           </Slide>
         </div>
