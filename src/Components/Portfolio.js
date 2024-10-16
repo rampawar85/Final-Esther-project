@@ -21,7 +21,7 @@ class Portfolio extends Component {
     // });
 
     return (
-      <section id="portfolio">
+      <section id="portfolio" style={{paddingLeft: '20px'}}>
         <Fade left duration={1000} distance="40px">       
                 <div className="row">
                     <h2  >Let's talk about Esther Data Labs Vision</h2>
@@ -32,7 +32,7 @@ class Portfolio extends Component {
                             data assets.Our vision is centered around three key pillars:
                         </p>                        
                         <p>
-                            <b>Data Transformation:</b> <br/>We believe in transforming raw, unstructured data into meaningful insights
+                            <b>Data & Digital Engineering:</b> <br/>We believe in transforming raw, unstructured data into meaningful insights
                             that drive informed decision-making. By employing cutting-edge technologies and advanced
                             analytics techniques, we help businesses extract valuable insights from their data, enabling
                             them to gain a competitive edge in their respective industries.
@@ -53,7 +53,7 @@ class Portfolio extends Component {
                     </div>
                 </div>            
             <br />            
-                <div className="row">
+                {/* <div className="row">
                     <h2>Let's talk about the program</h2>
                     <div>
                         <p>
@@ -83,7 +83,7 @@ class Portfolio extends Component {
                             </li>
                         </ol>                       
                     </div>
-                </div>
+                </div> */}
             
           {/* <div className="row">
             <div className="twelve columns collapsed">

@@ -32,7 +32,7 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#about">
-              Data Security
+              Services
               </a>
             </li>
 

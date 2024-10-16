@@ -1,117 +1,74 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+const imagesData = [
+  {
+    id: 1,
+    title: 'Data & Digital Engineering',
+    src: 'images/service_first.jpg', 
+    info: 'This is the information for the First section.'
+  },
+  {
+    id: 2,
+    title: 'Enterprise AI ',
+    src: 'images/service_second.jpg',
+    info: 'This is the information for the Second section.'
+  },
+  {
+    id: 3,
+    title: 'Data Security',
+    src: 'images/service_third.jpg',
+    info: 'Cyber security consulting services to help business assess risks,develop security strategy and implement best practices.'    
+   
+  }
+];
 
 class About extends Component {
-  render() {
-    if (!this.props.data) return null;
-
-    const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
-    const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
-    const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
-
-    return (
-      <section id="about">
-        <Fade duration={1000}>
-          <div className="row">
-            <h3 style={{color:'#fff'}}>Data Security</h3>
-          </div>
-          <div className="row">
-            <p>
-              Cyber security consulting services to help business assess risks,
-              develop security strategy and implement best practices.
-            </p>
-
-            <p>
-              <b>Threat Intelligence - </b> <br />
-              Services that gather and analyze information about current and
-              potential cyber threats. This helps organization's stay ahead of
-              attackers by understanding their tactics and techniques.
-            </p>
-
-            <p>
-              <b>Penetrating Testing -</b> <br /> Simulating cyber attacks to
-              identify vulnerabilities in systems and networks before malicious
-              hackers can exploit them.
-            </p>
-
-            <p>
-              <b>Security Awareness Training -</b> <br /> Educating
-              employees/students about cybersecurity best practices to prevent
-              human errors that could lead to security breaches.
-            </p>
-
-            <p>
-              <b>Workstation Security - </b> <br />
-              protecting sensitive data and ensuring the integrity of your
-              organization's IT infrastructure.
-            </p>
-
-            <p>
-              <b>Application Security - </b> <br /> involves implementing
-              measures to protect software applications from threats throughout
-              their lifecycle, from development to deployment and beyond.
-            </p>
-
-            <p>
-              <b>Network Security -</b> <br /> protecting the integrity,
-              confidentiality, and availability of data and resources as they
-              are transmitted across or accessed through networks.
-            </p>
-
-            <p>
-              <b>DevSecOps -</b> <br /> is a practice that implements security
-              into every phase of the software development lifecycle.
-            </p>
-            <br />
-            {/* <div className="three columns">
-              <img
-                className="profile-pic"
-                src={profilepic}
-                alt="Nordic Giant Profile Pic"
-              />
-            </div>
-            <div className="nine columns main-col">
-              <h2>About Me</h2>
-
-              <p>{bio}</p>
-              <div className="row">
-                <div className="columns contact-details">
-                  <h2>Contact Details</h2>
-                  <p className="address">
-                    <span>{name}</span>
-                    <br />
-                    <span>
-                      {street}
-                      <br />
-                      {city} {state}, {zip}
-                    </span>
-                    <br />
-                    <span>{phone}</span>
-                    <br />
-                    <span>{email}</span>
-                  </p>
-                </div>
-                <div className="columns download">
-                  <p>
-                    <a href={resumeDownload} className="button">
-                      <i className="fa fa-download"></i>Download Resume
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div> */}
-          </div>
-        </Fade>
-      </section>
-    );
+  constructor(props) {
+    super(props);
+    // Set initial state
+    this.state = {
+      activeSection: null
+    };
   }
+    // Handle click event to update state with the selected section
+    handleClick = (id) => {
+      this.setState({ activeSection: id });
+    };
+
+    render() {
+      const { activeSection } = this.state;
+  
+      return (
+        <div className="App" id="about">
+          <div className="image-grid">
+            {imagesData.map((image) => (
+              <div
+                key={image.id}
+                className="image-container"
+                onClick={() => this.handleClick(image.id)}
+              >
+                <img src={image.src} alt={image.title} className="image" />
+                <h5 style={{color:'#fff'}}>{image.title}</h5>
+              </div>
+            ))}
+          </div>
+  
+          <div className="info-section">
+            {imagesData.map((image) =>
+              activeSection === image.id ? (
+                <div key={image.id} className="info-content">
+                  <h2>{image.title} :</h2>
+                  <p>{image.info}</p>
+                </div>
+              ) : null
+            )}
+          </div>
+        </div>
+      );
+    }
 }
 
 export default About;
+
+
+

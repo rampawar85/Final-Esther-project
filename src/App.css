@@ -1,0 +1,44 @@
+/* File: App.css */
+.App {
+   
+  }
+  
+  .image-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .image-container {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .image {
+    width: 255px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .image:hover {
+    transform: scale(1.1);
+  }
+  
+  .info-section {
+    margin-top: 20px;
+  }
+  
+  .info-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+  }
+
+
+@media (max-width: 768px) {
+    .intern {
+        margin-bottom: 60px;
+    }
+  }

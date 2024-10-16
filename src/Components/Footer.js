@@ -18,21 +18,15 @@ class Footer extends Component {
     return (
       <footer>
         <div className="row">
-          {/* <Fade bottom>
+          <Fade bottom>
             <div className="twelve columns">
-              <ul className="social-links">{networks}</ul>
+              {/* <ul className="social-links">{networks}</ul> */}
 
-              <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
-                <li>
-                  Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
-                  </a>
-                </li>
+              <ul className="copyright" style={{color: 'white'}}>
+                <li>&copy;2024 Esther Data Labs Pvt Ltd. All rights reserved. </li>               
               </ul>
             </div>
-          </Fade> */}
+          </Fade>
 
           <div id="go-top">
             <a className="smoothscroll" title="Back to Top" href="#home">

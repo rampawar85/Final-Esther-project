@@ -11,11 +11,16 @@ class Resume extends Component {
     return color;
   }
 
+
+
   render() {
     if (!this.props.data) return null;
+   // const internpic = "images/" + this.props.data.image;
     const mystyle = {
-      paddingTop: "80px",    
+      marginBottom: "60px",    
     };
+  
+   
 
     const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function (education) {
@@ -42,34 +47,40 @@ class Resume extends Component {
       return (
         <div style={{marginTop: "-35px"}}  key={work.company}>
           <p>
-            We continuously run internship programs and other initiatives all
-            over the globe. Intention of the internship program is to enhance
-            the skillsets of individuals including students, government
-            officials, law enforcement, working professionals, trainers and all
-            who want to make their career in software development & Data
-            Engineering.
-            <br />
-            Key points about our proposed internship program:
+          We continuously run internship programs and other initiatives all over the globe. 
+          Intention of the internship program is to enhance the skillsets of individuals including students,
+          government officials, law enforcement, working professionals, trainers and all who want to make their career in Software development ,
+          Data Science,  Data Engineering, Data Visualizations , Data Security. 
+          Key points about our proposed internship program:            
             <br />
             <br />
-            1. Structured Learning Environment: Our internship program is
-            designed to provide a structured learning environment where interns
-            can gain hands-on experience in Software development & Data
-            Engineering .<br />
+           <b>1. Structured Learning Environment:</b> Our internship program is designed to provide a structured 
+            learning environment where interns can gain hands-on experience in Software development,  
+            Data Science,  Data Engineering, Data Visualizations , Data Security.<br />
             <br />
-            2. Mentorship and Guidance: We are dedicated to providing mentorship
-            and guidance to interns throughout their internship period, ensuring
-            they have the support needed for personal and professional growth.
+            <b>2. Mentorship and Guidance:</b> We are dedicated to providing mentorship and guidance to interns throughout their
+            internship period, ensuring they have the support needed for personal and professional growth.
             <br />
             <br />
-            3. Customizable Programs: We understand the unique needs of Esther
-            Data Labs , and we are open to customizing internship programs to
-            align with your company's goals and values.
+            <b>3. Customizable Programs:</b> We understand the unique needs of IT Industries ,
+            and we are open to customizing internship programs to align with Top IT company's goals and values.
             <br />
             <br />
-            4. Talent Pipeline: By partnering with Esther Data Labs , you will
-            have access to a pool of talented and motivated individuals who may
-            become potential future hires for your organization.
+            <b>4. Talent Pipeline:</b> By partnering with Esther Data Labs ,
+            you will have access to a pool of talented and motivated individuals who may become
+            potential future hires for the  IT Industries  over the globe.
+          <br/>
+          <br/>
+          <b>5. Benefits for Interns : </b>
+            <ul style={{paddingLeft:'30px'}}>              
+              <li style={{listStyleType:'disc'}}>Live Industry Project experience</li>
+              <li style={{listStyleType:'disc'}}>Internship Letter and Certificate</li>
+              <li style={{listStyleType:'disc'}} >On regular basis progress feedback</li>
+              <li style={{listStyleType:'disc'}}>Round the clock availability of Mentor</li>
+              <li style={{listStyleType:'disc'}}>Virtual Internship</li>
+            </ul>   
+            <b>6. Eligibility :</b> Internship for  ME/M.Tech(All Branches),
+            BE/B.Tech (All Branches),BCA/MCA, BCS/MCS, BSc, Diploma Students(All  Branches)        
           </p>
         </div>
       );
@@ -83,6 +94,12 @@ class Resume extends Component {
               <h1>
                 <span>INTERNSHIP</span>
               </h1>
+              <img
+              style={{paddingTop: '14px'}}
+                className="profile-pic"
+                src="images/internship.png"
+                alt="Internship"
+              />
             </div>
 
             <div className="nine columns main-col">
@@ -95,7 +112,7 @@ class Resume extends Component {
 
         <Slide left duration={1300}>
           <div className="row work">
-            <div style={{}} className="columns ">
+            <div className="columns intern">
               <h1>
                 <span>INTERNSHIP PROGRAM</span>
               </h1>

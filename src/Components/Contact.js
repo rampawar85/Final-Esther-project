@@ -37,7 +37,7 @@ class Contact extends Component {
           <Slide left duration={1000}>
             <div className="eight columns">
               <p>
-                <b>Our offices:</b>  Our culture of engineering excellence, technical
+                <b style={{color: 'white'}}>Our offices :</b><br/>  Our culture of engineering excellence, technical
                 expertise, and care for our clients and talented workforce has
                 made us one of the fastest-growing companies over the globe. We
                 are headquartered in Pune, have training/learning centers in the
