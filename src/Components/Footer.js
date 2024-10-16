@@ -23,7 +23,7 @@ class Footer extends Component {
               {/* <ul className="social-links">{networks}</ul> */}
 
               <ul className="copyright" style={{color: 'white'}}>
-                <li>&copy;2024 Esther Data Labs Pvt Ltd. All rights reserved. </li>               
+                <li>&copy;2024 Esther Analytical Data systems Pvt Ltd. All rights reserved. </li>               
               </ul>
             </div>
           </Fade>

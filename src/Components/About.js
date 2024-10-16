@@ -160,7 +160,7 @@ class About extends Component {
               onClick={() => this.handleClick(image.id)}
             >
               <img src={image.src} alt={image.title} className="image" />
-              <h6 style={{ color: "#fff" }}>{image.title}</h6>
+              <h6 className="image-font" style={{ color: "#fff" }}>{image.title}</h6>
             </div>
           ))}
         </div>
